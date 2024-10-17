@@ -24,11 +24,11 @@ public class ProductRepositoryImplimentation implements ProductRepository {
 
 	@Override
 	public boolean updateById(int productId, ProductDto dto) {
-		if(productId!=0) {
+		if(!list.isEmpty()) {
 			for (int i = 0; i <list.size(); i++) {
-				if(list.get(i)!=null && list.get(i).getProductId()==productId) {
-					list.get(i).setProductName("Chair");
-					
+				if(list.get(i).getProductId()==productId) {
+					//listDto.get(i).setComplainantName("Manisha");
+					list.set(i, dto);
 					return true;
 				}
 			}
@@ -40,11 +40,12 @@ public class ProductRepositoryImplimentation implements ProductRepository {
 	public boolean deleteById(int productId, ProductDto dto) {
 		if(!list.isEmpty()) {
 			for (int i = 0; i <list.size(); i++) {
-				if(list.get(i)!=null && list.get(i).getProductId()==productId) {
+				if(list.get(i).getProductId()==productId) {
 			      list.remove(i);
-					return true;
+					
 				}
 			}
+			return true;
 		}
 		
 		return false;

@@ -39,8 +39,10 @@ public class ProductServiceImplimentation implements ProductService {
 
 	@Override
 	public String deleteById(int productId, ProductDto dto) {
+		if(productId>0) {
 		if(productRepo.updateById(productId, dto)) {
 			return "Deleted";
+		}
 		}
 		return "Not Deleted";
 	}

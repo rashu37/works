@@ -22,10 +22,11 @@ public class VendorRepoImpl implements  VendorRepo{
 
 	@Override
 	public boolean updateById(int vendorId, VendorDto dto) {
-		if(vendorId!=0) {
+		if(!list.isEmpty()) {
 			for (int i = 0; i <list.size(); i++) {
-				if(list.get(i)!=null && list.get(i).getVendorId()==vendorId) {
-					list.get(i).setVendorName("kalki");
+				if(list.get(i).getVendorId()==vendorId) {
+					list.set(i, dto);
+					//list.get(i).setVendorName("kalki");
 					//list.get(i).setVendorName(dto.getVendorName());
 					return true;
 				}
@@ -38,7 +39,7 @@ public class VendorRepoImpl implements  VendorRepo{
 	public boolean deleteById(int vendorId, VendorDto dto) {
 		if(!list.isEmpty()) {
 			for (int i = 0; i <list.size(); i++) {
-				if(list.get(i)!=null && list.get(i).getVendorId()==vendorId) {
+				if(list.get(i).getVendorId()==vendorId) {
 			      list.remove(i);
 					return true;
 				}

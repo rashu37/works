@@ -1,0 +1,21 @@
+1 Difference between the Checked and Unchecked Exception
+
+Checked Exception= These Exception are checked at compile time.
+Example= ClassNotFoundException,IOException
+
+Unchecked Exception=These Exception are checked at Run time.
+Example=Arthematic Exception, NullPointerException
+
+2 Polymorphism= Polymorphism is concept of object-oriented programming language. where having same method signature but implementation is different. there are two types of polymorphism 1) Compile-time polymorphism(method Overloading) 2) Run time polymorphism(method overriding).
+  1 method Overloading =Having same method Name but Different Parameters is called overloading.
+  2 method Overridding= Having Same method Signature but difference in implementation is called methodOverriding
+
+3 Abstraction= Abstraction is concept of Object-Oriented programming language. Hiding the implementation part and displaying only necessary part in the program. 
+To achieve the abstract class, we need to write a class using abstract keyword and then should implements in parent class. In this way what we write a methods in the abstract class, that will implemented in Parent class. so, here we can acheive the Abstraction.
+As same way to interfaces classes but only thing is interface keyword is changed.
+
+4 ArrayList= * ArrayList internally uses a dynamic array to store the elements. 
+             * There is shift in Array if any one deleted the index.
+
+  LinkedList=* LinkedList internally uses a doubly linked list to store the elements.
+             * There is no bit shifting in the LinkedList.
